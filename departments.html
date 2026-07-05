@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shri Ram Hospital | Departments</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f9ff;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(255,255,255,.95);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#0077b6;
+}
+
+.nav-menu{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+}
+
+.nav-menu a:hover,
+.nav-menu .active{
+color:#0077b6;
+}
+
+.book-btn{
+padding:12px 24px;
+border-radius:50px;
+background:linear-gradient(135deg,#00b4d8,#0077b6);
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+height:70vh;
+
+background:
+linear-gradient(rgba(0,50,100,.70),
+rgba(0,50,100,.70)),
+url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1920&q=80');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:22px;
+}
+
+/* SECTION */
+
+.section-title{
+text-align:center;
+padding:70px 20px 40px;
+}
+
+.section-title h2{
+font-size:42px;
+color:#003366;
+}
+
+/* DEPARTMENT GRID */
+
+.department-container{
+width:90%;
+max-width:1400px;
+margin:auto;
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+padding-bottom:80px;
+}
+
+.department-card{
+background:white;
+border-radius:25px;
+padding:35px;
+text-align:center;
+transition:.4s;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.department-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.department-card i{
+font-size:60px;
+color:#0077b6;
+margin-bottom:20px;
+}
+
+.department-card h3{
+font-size:26px;
+color:#003366;
+margin-bottom:10px;
+}
+
+.department-card p{
+color:#666;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 28px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+background:linear-gradient(135deg,#00b4d8,#0077b6);
+color:white;
+}
+
+/* STATS */
+
+.stats{
+background:white;
+padding:70px 8%;
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+
+gap:20px;
+}
+
+.stat-box{
+text-align:center;
+}
+
+.stat-box h2{
+font-size:48px;
+color:#0077b6;
+}
+
+.stat-box p{
+color:#555;
+}
+
+/* EMERGENCY */
+
+.emergency{
+background:linear-gradient(135deg,#0077b6,#00b4d8);
+padding:70px 20px;
+text-align:center;
+color:white;
+}
+
+.emergency h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.nav-menu{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-heart-pulse"></i>
+Shri Ram Hospital
+</div>
+
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="doctors.html">Doctors</a></li>
+<li><a href="departments.html" class="active">Departments</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+<a href="appointments.html" class="book-btn">
+Book Now
+</a>
+
+</nav>
+
+<section class="hero">
+
+<div>
+<h1>Our Medical Departments</h1>
+<p>Advanced Healthcare Services Under One Roof</p>
+</div>
+
+</section>
+
+<section class="section-title">
+
+<h2>Explore Our Specialties</h2>
+
+<p>
+Choose a department to view specialist doctors.
+</p>
+
+</section>
+
+<div class="department-container">
+
+<div class="department-card">
+<i class="fa-solid fa-heart-pulse"></i>
+<h3>Cardiology</h3>
+<p>Advanced heart care and cardiovascular treatments.</p>
+<a href="doctors.html?department=Cardiology" class="btn">
+View Doctors
+</a>
+</div>
+
+<div class="department-card">
+<i class="fa-solid fa-brain"></i>
+<h3>Neurology</h3>
+<p>Brain and nervous system specialists.</p>
+<a href="doctors.html?department=Neurology" class="btn">
+View Doctors
+</a>
+</div>
+
+<div class="department-card">
+<i class="fa-solid fa-bone"></i>
+<h3>Orthopedic</h3>
+<p>Bone, joint and sports injury care.</p>
+<a href="doctors.html?department=Orthopedic" class="btn">
+View Doctors
+</a>
+</div>
+
+<div class="department-card">
+<i class="fa-solid fa-baby"></i>
+<h3>Pediatrics</h3>
+<p>Healthcare services for children.</p>
+<a href="doctors.html?department=Pediatrics" class="btn">
+View Doctors
+</a>
+</div>
+
+<div class="department-card">
+<i class="fa-solid fa-user-doctor"></i>
+<h3>Dermatology</h3>
+<p>Skin, hair and cosmetic treatments.</p>
+<a href="doctors.html?department=Dermatology" class="btn">
+View Doctors
+</a>
+</div>
+
+<div class="department-card">
+<i class="fa-solid fa-person-pregnant"></i>
+<h3>Gynecology</h3>
+<p>Women's healthcare and maternity services.</p>
+<a href="doctors.html?department=Gynecology" class="btn">
+View Doctors
+</a>
+</div>
+
+<div class="department-card">
+<i class="fa-solid fa-tooth"></i>
+<h3>Dentistry</h3>
+<p>Dental treatments and oral surgery.</p>
+<a href="doctors.html?department=Dentistry" class="btn">
+View Doctors
+</a>
+</div>
+
+<div class="department-card">
+<i class="fa-solid fa-eye"></i>
+<h3>Ophthalmology</h3>
+<p>Eye care and advanced vision treatment.</p>
+<a href="doctors.html?department=Ophthalmology" class="btn">
+View Doctors
+</a>
+</div>
+
+</div>
+
+<section class="stats">
+
+<div class="stat-box">
+<h2>25+</h2>
+<p>Departments</p>
+</div>
+
+<div class="stat-box">
+<h2>150+</h2>
+<p>Doctors</p>
+</div>
+
+<div class="stat-box">
+<h2>50K+</h2>
+<p>Patients Treated</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Emergency Care</p>
+</div>
+
+</section>
+
+<section class="emergency">
+
+<h2>24/7 Emergency Service</h2>
+
+<p>Call +91 98765 43210 Anytime</p>
+
+<br>
+
+<a href="appointments.html" class="btn">
+Book Appointment
+</a>
+
+</section>
+
+<footer>
+
+<h3>Shri Ram  Hospital</h3>
+
+<p>Compassion • Care • Commitment</p>
+
+<p>© 2026 CarePlus Hospital. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
