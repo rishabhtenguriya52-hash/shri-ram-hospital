@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shri Ram Hospital - Doctors</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f9ff;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#0077b6;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:700;
+}
+
+.nav-menu{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.nav-menu a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+
+background:
+linear-gradient(rgba(0,0,0,.55),
+rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1920&q=80');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+/* FILTER */
+
+.controls{
+display:flex;
+justify-content:center;
+gap:15px;
+padding:40px;
+flex-wrap:wrap;
+}
+
+.controls input,
+.controls select{
+padding:14px;
+width:250px;
+border:none;
+border-radius:50px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* DOCTOR GRID */
+
+.card-container{
+width:90%;
+margin:auto;
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+padding-bottom:80px;
+}
+
+.doctor-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.doctor-card:hover{
+transform:translateY(-10px);
+}
+
+.doctor-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.doctor-card h3{
+margin-top:15px;
+}
+
+.doctor-card span{
+color:#0077b6;
+font-weight:600;
+}
+
+.rating{
+color:#ffc107;
+font-size:18px;
+margin:10px 0;
+}
+
+.btn{
+display:inline-block;
+padding:12px 22px;
+margin:15px;
+border-radius:30px;
+background:#0077b6;
+color:white;
+text-decoration:none;
+}
+
+/* STATS */
+
+.stats{
+background:white;
+padding:60px;
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+
+gap:20px;
+}
+
+.stat-box{
+text-align:center;
+}
+
+.stat-box h2{
+font-size:45px;
+color:#0077b6;
+}
+
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-heart-pulse"></i>
+Shri Ram Hospital
+</div>
+
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="departments.html">Departments</a></li>
+<li><a href="appointments.html">Appointments</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div>
+<h1>Meet Our Doctors</h1>
+<p>World Class Medical Specialists</p>
+</div>
+
+</section>
+
+<div class="controls">
+
+<input
+type="text"
+id="doctorSearch"
+placeholder="Search Doctor">
+
+<select id="departmentFilter">
+
+<option value="all">All Departments</option>
+<option value="Cardiology">Cardiology</option>
+<option value="Neurology">Neurology</option>
+<option value="Orthopedic">Orthopedic</option>
+<option value="Pediatrics">Pediatrics</option>
+<option value="Dermatology">Dermatology</option>
+
+</select>
+
+</div>
+
+<div class="card-container">
+    <div class="doctor-card" data-name="raj sharma" data-department="Cardiology">
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800">
+<h3>Dr. Raj Sharma</h3>
+<span>Cardiology</span>
+<p>15+ Years Experience</p>
+<div class="rating">★★★★★</div>
+<a href="appointments.html" class="btn">Book Now</a>
+</div>
+
+<div class="doctor-card" data-name="priya singh" data-department="Neurology">
+<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800">
+<h3>Dr. Priya Singh</h3>
+<span>Neurology</span>
+<p>12+ Years Experience</p>
+<div class="rating">★★★★★</div>
+<a href="appointments.html" class="btn">Book Now</a>
+</div>
+
+<div class="doctor-card" data-name="amit verma" data-department="Orthopedic">
+<img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800">
+<h3>Dr. Amit Verma</h3>
+<span>Orthopedic</span>
+<p>10+ Years Experience</p>
+<div class="rating">★★★★★</div>
+<a href="appointments.html" class="btn">Book Now</a>
+</div>
+
+<div class="doctor-card" data-name="neha gupta" data-department="Pediatrics">
+<img src="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?w=800">
+<h3>Dr. Neha Gupta</h3>
+<span>Pediatrics</span>
+<p>11+ Years Experience</p>
+<div class="rating">★★★★★</div>
+<a href="appointments.html" class="btn">Book Now</a>
+</div>
+
+<div class="doctor-card" data-name="arjun mehta" data-department="Dermatology">
+<img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=800">
+<h3>Dr. Arjun Mehta</h3>
+<span>Dermatology</span>
+<p>9+ Years Experience</p>
+<div class="rating">★★★★★</div>
+<a href="appointments.html" class="btn">Book Now</a>
+</div>
+</div>
+
+<section class="stats">
+
+<div class="stat-box">
+<h2>150+</h2>
+<p>Doctors</p>
+</div>
+
+<div class="stat-box">
+<h2>25+</h2>
+<p>Departments</p>
+</div>
+
+<div class="stat-box">
+<h2>50000+</h2>
+<p>Patients</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Emergency</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>Shri Ram Hospital</h3>
+
+<p>Compassion • Care • Commitment</p>
+
+</footer>
+
+<script>
+
+const search =
+document.getElementById("doctorSearch");
+
+const filter =
+document.getElementById("departmentFilter");
+
+function filterDoctors(){
+
+const searchValue =
+search.value.toLowerCase();
+
+const filterValue =
+filter.value;
+
+document
+.querySelectorAll(".doctor-card")
+.forEach(card=>{
+
+const name =
+card.dataset.name.toLowerCase();
+
+const dept =
+card.dataset.department;
+
+const show =
+name.includes(searchValue)
+&&
+(
+filterValue==="all"
+||
+dept===filterValue
+);
+
+card.style.display =
+show ? "block" : "none";
+
+});
+}
+
+search.addEventListener(
+"input",
+filterDoctors
+);
+
+filter.addEventListener(
+"change",
+filterDoctors
+);
+
+</script>
+
+</body>
+</html>
