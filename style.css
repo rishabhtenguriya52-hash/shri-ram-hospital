@@ -1,0 +1,1360 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fbff;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#0077b6;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.nav-menu{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active{
+    color:#0077b6;
+}
+
+.nav-menu a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:3px;
+    background:#0077b6;
+    transition:.3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after{
+    width:100%;
+}
+
+.nav-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.call-btn{
+    padding:12px 20px;
+    border:2px solid #0077b6;
+    border-radius:30px;
+    text-decoration:none;
+    color:#0077b6;
+    font-weight:600;
+    transition:.3s;
+}
+
+.call-btn:hover{
+    background:#0077b6;
+    color:#fff;
+}
+
+.book-btn{
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    background:linear-gradient(135deg,#0077b6,#00b4d8);
+    transition:.3s;
+}
+
+.book-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,119,182,.3);
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    padding:80px 8%;
+    min-height:90vh;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:55px;
+    color:#003049;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.primary-btn,
+.book-btn{
+
+    background:linear-gradient(
+    135deg,
+    #ff4d4d,
+    #ff0000
+    ) !important;
+
+    color:white !important;
+}
+.primary-btn:hover,
+.book-btn:hover{
+
+    background:linear-gradient(
+    135deg,
+    #ff9900,
+    #ff6600
+    ) !important;
+
+    color:white !important;
+
+    transform:translateY(-5px);
+}
+
+.secondary-btn{
+
+    background:white !important;
+
+    border:2px solid #ff0000 !important;
+
+    color:#ff0000 !important;
+}
+
+.secondary-btn:hover{
+
+    background:#ff0000 !important;
+
+    color:white !important;
+}
+
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* ==========================
+   EMERGENCY
+========================== */
+
+.emergency{
+    padding:50px 8%;
+}
+
+.emergency-box{
+    background:#e63946;
+    color:#fff;
+    padding:30px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.emergency-box i{
+    font-size:45px;
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+.section{
+    padding:80px 8%;
+}
+
+.light-bg{
+    background:#eef7ff;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#003049;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:25px;
+    color:#0077b6;
+    margin-bottom:15px;
+}
+
+
+/* ==========================
+   PATIENT BOX
+========================== */
+
+.patient-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.patient-box{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-left:5px solid #0077b6;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+button{
+    padding:14px 25px;
+    border:none;
+    background:#24b600;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#003049;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .nav-buttons{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:35px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .emergency-box{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+/* ==========================
+   VIP DOCTOR PAGE
+========================== */
+
+.doctor-hero{
+height:60vh;
+
+background:
+linear-gradient(
+rgba(0,40,80,.75),
+rgba(0,40,80,.75)
+),
+url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0?w=1920');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+text-align:center;
+color:white;
+}
+
+.doctor-hero h1{
+font-size:65px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.doctor-hero p{
+font-size:22px;
+}
+
+/* SEARCH BAR */
+
+.doctor-controls{
+
+padding:50px 8%;
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+#doctorSearch,
+#departmentFilter{
+
+padding:15px 20px;
+
+border:none;
+
+outline:none;
+
+border-radius:50px;
+
+background:white;
+
+font-size:15px;
+
+min-width:280px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.08);
+}
+
+/* GRID */
+
+.card-container{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+}
+
+/* VIP CARD */
+
+.doctor-card{
+
+background:white;
+
+border-radius:30px;
+
+padding:30px;
+
+text-align:center;
+
+overflow:hidden;
+
+position:relative;
+
+transition:.5s;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+.doctor-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:6px;
+
+background:
+linear-gradient(
+90deg,
+#00b4d8,
+#0077b6
+);
+}
+
+.doctor-card:hover{
+
+transform:
+translateY(-15px);
+
+box-shadow:
+0 25px 50px rgba(0,119,182,.20);
+}
+
+.doctor-card img{
+
+width:180px;
+height:180px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:6px solid #eaf8ff;
+
+margin-bottom:15px;
+
+transition:1s;
+}
+
+.doctor-card:hover img{
+
+transform:scale(1.08);
+}
+
+.doctor-card h3{
+
+font-size:24px;
+
+color:#003049;
+
+margin-bottom:10px;
+}
+
+.doctor-card span{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:#eaf8ff;
+
+color:#0077b6;
+
+border-radius:30px;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:10px;
+}
+
+.doctor-card p{
+
+color:#666;
+
+margin-bottom:15px;
+}
+
+/* BUTTONS */
+
+.primary-btn{
+
+padding:12px 24px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:
+linear-gradient(
+135deg,
+#0077b6,
+#00b4d8);
+
+color:white;
+
+font-weight:600;
+
+margin:5px;
+}
+
+.secondary-btn{
+
+padding:12px 24px;
+
+border:2px solid #0077b6;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:white;
+
+color:#0077b6;
+
+font-weight:600;
+
+margin:5px;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+
+transform:translateY(-3px);
+}
+
+/* POPUP */
+
+.doctor-popup{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+rgba(0,0,0,.75);
+
+z-index:9999;
+
+justify-content:center;
+align-items:center;
+
+padding:20px;
+}
+
+.popup-content{
+
+background:white;
+
+width:100%;
+max-width:800px;
+
+border-radius:30px;
+
+padding:35px;
+
+position:relative;
+
+max-height:90vh;
+
+overflow-y:auto;
+}
+
+.close-btn{
+
+position:absolute;
+
+top:15px;
+right:25px;
+
+font-size:35px;
+
+cursor:pointer;
+}
+
+.popup-content img{
+
+width:220px;
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+display:block;
+
+margin:auto;
+margin-bottom:20px;
+}
+
+.popup-content h2{
+
+text-align:center;
+
+color:#003049;
+
+margin-bottom:15px;
+}
+
+.popup-content p{
+
+line-height:1.8;
+
+margin-bottom:10px;
+}
+
+/* BOOKING FORM */
+
+#bookingForm{
+
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+#bookingForm input{
+
+padding:15px;
+
+border:1px solid #ddd;
+
+border-radius:12px;
+}
+
+#bookingForm button{
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:
+linear-gradient(
+135deg,
+#0077b6,
+#00b4d8);
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+}
+
+/* ANIMATION */
+
+.doctor-card{
+
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(30px);
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.doctor-hero h1{
+font-size:40px;
+}
+
+.doctor-hero p{
+font-size:18px;
+}
+
+#doctorSearch,
+#departmentFilter{
+width:100%;
+}
+
+.popup-content{
+padding:20px;
+}
+
+.popup-content img{
+
+width:150px;
+height:150px;
+}
+
+.doctor-card img{
+
+width:140px;
+height:140px;
+}
+}
+/* ==========================
+   BUTTONS
+========================== */
+
+.primary-btn{
+    background:#0077b6;
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    margin:5px;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+    background:#fff;
+    color:#0077b6;
+    border:2px solid #0077b6;
+    padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    margin:5px;
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    background:#0077b6;
+    color:#fff;
+}
+
+/* ==========================
+   POPUP
+========================== */
+
+.doctor-popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.popup-content{
+    background:#fff;
+    width:100%;
+    max-width:800px;
+    border-radius:25px;
+    padding:35px;
+    position:relative;
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:25px;
+    font-size:35px;
+    cursor:pointer;
+    color:#333;
+}
+
+.popup-content img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 20px;
+}
+
+.popup-content h2{
+    text-align:center;
+    color:#003049;
+    margin-bottom:20px;
+}
+
+.popup-content p{
+    margin:10px 0;
+    color:#555;
+    line-height:1.8;
+}
+
+/* ==========================
+   BOOKING FORM
+========================== */
+
+#bookingForm{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+#bookingForm input{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+}
+
+#bookingForm button{
+    background:#0077b6;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+#bookingForm button:hover{
+    opacity:.9;
+}
+
+/* ==========================
+   PREMIUM TITLE
+========================== */
+
+.section-title h2{
+    font-size:42px;
+    color:#003049;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+    font-size:17px;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .doctor-controls{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    #doctorSearch,
+    #departmentFilter{
+        width:100%;
+        max-width:350px;
+    }
+
+    .popup-content{
+        padding:20px;
+    }
+
+    .popup-content img{
+        width:150px;
+        height:150px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+}
+/* =========================
+   ULTRA VIP ANIMATIONS
+========================= */
+
+/* PREMIUM CARDS */
+
+.department-card,
+.doctor-card,
+.card,
+.testimonial{
+
+    position:relative;
+    overflow:hidden;
+
+    transition:
+    transform .7s ease,
+    box-shadow .7s ease,
+    background .7s ease;
+
+    will-change:transform;
+}
+
+/* GLOW EFFECT */
+
+.department-card::before,
+.doctor-card::before,
+.card::before{
+
+    content:"";
+
+    position:absolute;
+    top:-100%;
+    left:-100%;
+
+    width:250%;
+    height:250%;
+
+    background:
+    linear-gradient(
+    45deg,
+    transparent,
+    rgba(255,255,255,.3),
+    transparent);
+
+    transform:rotate(25deg);
+
+    transition:1s;
+}
+
+.department-card:hover::before,
+.doctor-card:hover::before,
+.card:hover::before{
+
+    top:100%;
+    left:100%;
+}
+
+/* CARD HOVER */
+
+.department-card:hover,
+.doctor-card:hover,
+.card:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.03);
+
+    box-shadow:
+    0 25px 50px rgba(0,119,182,.20);
+
+    border-color:#00b4d8;
+}
+
+/* FLOATING EFFECT */
+
+.doctor-card{
+    animation:floatCard 5s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+/* ICON EFFECT */
+
+.department-card i,
+.card i{
+
+    transition:.6s ease;
+}
+
+.department-card:hover i,
+.card:hover i{
+
+    transform:
+    rotate(15deg)
+    scale(1.25);
+
+    color:#ff9800;
+
+    text-shadow:
+    0 0 15px rgba(255,152,0,.5);
+}
+
+/* DOCTOR IMAGE */
+
+.doctor-card img{
+
+    transition:
+    transform 1s ease,
+    box-shadow .8s ease;
+}
+
+.doctor-card:hover img{
+
+    transform:scale(1.12);
+
+    box-shadow:
+    0 15px 30px rgba(0,119,182,.25);
+}
+
+/* BUTTON EFFECT */
+
+.primary-btn,
+.secondary-btn,
+.book-btn{
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.5s ease;
+}
+
+.primary-btn::before,
+.book-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.4),
+    transparent);
+
+    transition:.8s;
+}
+
+.primary-btn:hover::before,
+.book-btn:hover::before{
+
+    left:120%;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.book-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    box-shadow:
+    0 15px 35px rgba(0,119,182,.35);
+}
+
+/* TEXT FADE */
+
+.section-title h2{
+
+    animation:titleGlow 2s ease infinite alternate;
+}
+
+@keyframes titleGlow{
+
+from{
+text-shadow:none;
+}
+
+to{
+text-shadow:
+0 0 15px rgba(0,180,216,.35);
+}
+
+}
+
+/* SCROLL FADE */
+
+.department-card,
+.doctor-card,
+.card,
+.testimonial{
+
+    animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* PREMIUM GLASS EFFECT */
+
+.department-card,
+.doctor-card{
+
+    backdrop-filter:blur(15px);
+
+    background:
+    rgba(255,255,255,.95);
+
+    border:
+    1px solid rgba(255,255,255,.3);
+}
+
+/* TESTIMONIAL HOVER */
+
+.testimonial:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.12);
+}
+.hero-content h1{
+
+    background:
+    linear-gradient(
+    90deg,
+    #ffffff,
+    #00d4ff,
+    #ffffff);
+
+    background-size:200% auto;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 4s linear infinite;
+}
+
+@keyframes shine{
+
+to{
+background-position:200% center;
+}
+
+}
+/* ==========================
+   VIP FULLSCREEN VIDEO HERO
+========================== */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-video{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    z-index:-2;
+}
+
+.hero-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,30,60,.65));
+
+    z-index:-1;
+}
+
+.hero-content{
+    max-width:900px;
+    padding:20px;
+    color:white;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:12px 25px;
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:50px;
+
+    margin-bottom:25px;
+}
+
+.hero-content h1{
+    font-size:75px;
+    line-height:1.1;
+    margin-bottom:20px;
+    color:white;
+}
+
+.hero-content p{
+    font-size:22px;
+    color:#f2f2f2;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+    height:100vh;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.hero-badge{
+    font-size:13px;
+}
+
+}
