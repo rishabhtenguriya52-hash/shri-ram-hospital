@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shri Ram Hospital - VIP Appointment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,0.55),
+rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80');
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+min-height:100vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(15px);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#fff;
+}
+
+.nav-menu{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu .active{
+color:#00d4ff;
+}
+
+.book-btn{
+padding:12px 25px;
+background:linear-gradient(135deg,#00b4d8,#0077b6);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+}
+
+/* HERO */
+
+.app-hero{
+text-align:center;
+padding:70px 20px 40px;
+color:white;
+}
+
+.app-hero h1{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.app-hero p{
+font-size:18px;
+opacity:.9;
+}
+
+/* CONTAINER */
+
+.app-container{
+display:flex;
+justify-content:center;
+padding:20px;
+}
+
+/* GLASS CARD */
+
+.app-card{
+width:100%;
+max-width:750px;
+
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.2);
+
+padding:35px;
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* GRID */
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.full{
+grid-column:span 2;
+}
+
+/* INPUTS */
+
+.app-card input,
+.app-card select,
+.app-card textarea{
+
+width:100%;
+padding:15px;
+
+border:none;
+outline:none;
+
+border-radius:12px;
+
+background:rgba(255,255,255,0.95);
+
+font-size:15px;
+}
+
+/* BUTTON */
+
+.app-btn{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(
+135deg,
+#00b4d8,
+#0077b6
+);
+
+color:white;
+
+font-size:18px;
+font-weight:600;
+
+cursor:pointer;
+
+transition:.4s;
+}
+
+.app-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 10px 25px
+rgba(0,180,216,0.4);
+}
+
+/* FEATURES */
+
+.features{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+padding:60px 8%;
+}
+
+.feature{
+
+background:rgba(255,255,255,0.12);
+
+backdrop-filter:blur(10px);
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+color:white;
+}
+
+.feature i{
+font-size:40px;
+margin-bottom:15px;
+color:#00d4ff;
+}
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:20px;
+}
+
+.nav-menu{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.app-hero h1{
+font-size:38px;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:span 1;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-hospital"></i>
+Shri Ram Hospital
+</div>
+
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="doctors.html">Doctors</a></li>
+
+<li><a href="departments.html">Departments</a></li>
+
+<li><a href="appointments.html" class="active">
+Appointments
+<li><a href="testimonials.html">Testimonials</a></li>
+</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<a href="#" class="book-btn">
+24/7 Emergency
+</a>
+
+</nav>
+
+<div class="app-hero">
+
+<h1>Book Your Appointment</h1>
+
+<p>
+Fast • Secure • Professional Healthcare Booking
+</p>
+
+</div>
+
+<div class="app-container">
+
+<div class="app-card">
+
+<form id="appointmentForm">
+
+<div class="form-grid">
+
+<input type="text"
+placeholder="Full Name"
+required>
+
+<input type="tel"
+placeholder="Phone Number"
+required>
+
+<input type="email"
+placeholder="Email Address"
+required>
+
+<select required>
+<option>Select Department</option>
+<option>Cardiology</option>
+<option>Neurology</option>
+<option>Orthopedics</option>
+<option>Pediatrics</option>
+<option>Dermatology</option>
+</select>
+
+<select required>
+<option>Select Doctor</option>
+<option>Dr. Raj Sharma</option>
+<option>Dr. Priya Singh</option>
+<option>Dr. Amit Verma</option>
+<option>Dr. Neha Gupta</option>
+</select>
+
+<input type="date" required>
+
+<input type="time" required>
+
+<textarea
+class="full"
+rows="5"
+placeholder="Describe Your Symptoms">
+</textarea>
+
+</div>
+
+<br>
+
+<button class="app-btn">
+Confirm Appointment
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<section class="features">
+
+<div class="feature">
+<i class="fa-solid fa-user-doctor"></i>
+<h3>Expert Doctors</h3>
+<p>Highly qualified specialists.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-heart-pulse"></i>
+<h3>24/7 Care</h3>
+<p>Emergency services available.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-shield-heart"></i>
+<h3>Trusted Hospital</h3>
+<p>Safe and modern treatment.</p>
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Shri Ram Hospital | All Rights Reserved
+</p>
+
+</footer>
+
+<script>
+
+document
+.getElementById("appointmentForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert(
+"✅ Appointment Booked Successfully!"
+);
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
