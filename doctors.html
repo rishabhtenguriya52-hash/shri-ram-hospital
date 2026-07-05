@@ -25,34 +25,52 @@ body{
 background:#f5f9ff;
 }
 
-/* NAVBAR */
+/* ==========================
+   MOBILE RESPONSIVE NAVBAR
+========================== */
 
-.navbar{
-background:#0077b6;
-padding:15px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
+@media (max-width:768px){
+
+    .navbar{
+        padding:12px 15px;
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .nav-menu{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .nav-menu a{
+        font-size:14px;
+    }
 }
 
-.logo{
-color:white;
-font-size:28px;
-font-weight:700;
-}
+@media (max-width:480px){
 
-.nav-menu{
-display:flex;
-list-style:none;
-gap:25px;
-}
+    .logo{
+        font-size:18px;
+    }
 
-.nav-menu a{
-color:white;
-text-decoration:none;
-font-weight:600;
-}
+    .nav-menu{
+        flex-direction:column;
+        gap:10px;
+        width:100%;
+    }
 
+    .nav-menu a{
+        font-size:13px;
+        display:block;
+        padding:5px 0;
+    }
+}
 /* HERO */
 
 .hero{
